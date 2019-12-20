@@ -86,6 +86,7 @@ After sending a  HIGH pulse  of 116 ns, the  superloop  reacts within 170 ns to 
 This is repeated every 532 ns, giving a theoretical value of 3759398 interrupts per second.
 
  ![image3](./image3.jpg?raw=true "Detect an external interrupt in 176 ns")
+ ***Detect an external interrupt in 176 ns***
 
 But since the interrupt source task (RTOS2) has to share its time with WiFi an d console output the measured value is<br>
 a little bit lower. And it changes from second to second a little bit.
