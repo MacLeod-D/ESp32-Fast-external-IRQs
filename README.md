@@ -99,4 +99,14 @@ Errors are counted - and Errors are 0 for hours and hours.
  ![image1](./image2.jpg?raw=true "3.6 Million external Interrupts per Second:")
 
 
+#  Conclusion
+ 
+It is possible to count and react on more than ***3.600.000*** external pinchanges per second (with at least<br>
+120 ns HIGH-Length) at both edges! That is really ***Superfast***.<br>
+You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
+
+
+
+
+
 
