@@ -32,6 +32,13 @@ This is the result:
 1.74 us from interrupt (source) to interrupt routine
 7.20 us from interrupt (source) to RTOS-tasks
 
+***That was disappointing***
+
+----------------
+
+
+
+
        while(1) {                                                       // the superloop
          level=GPIO_IN_Read(PinB);                                      
          
