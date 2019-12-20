@@ -80,6 +80,22 @@ Advantages:
 1) Superfast
 2) I am not in an interrupt routine. Therefore I am able to use all functions an RTOS-task can use.
 
-### How fast is superfast
+### How fast is superfast ?
+
+After sending a  HIGH pulse  of 116 ns, the  superloop  reacts within 170 ns to each edge (rising and falling).<br>
+This is repeated every 532 ns, giving a theoretical value of 3759398 interrupts per second.
+
+But since the interrupt source task (RTOS2) has to share its time with WiFi an d console output the measured value is<br>
+a little bit lower. And it changes from second to second a little bit.
+
+But how can I be sure not missing interrupts?<br>
+It's easy: every time I generate an interrupt I count "Sended Interrupts".<br>
+The total independent ***superloop*** counts every detected pin change "interrupt".<br>
+They should have exactly the same value - and they do !<br>
+Errors are counted - and Errors are 0 for hours and hours.
+
+
+ ![image1](./image2.jpg?raw=true "3.6 Million external Interrupts per Second:")
+
 
 
