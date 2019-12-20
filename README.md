@@ -94,6 +94,7 @@ The total independent ***superloop*** counts every detected pin change "interrup
 They should have exactly the same value - and they do !<br>
 Errors are counted - and Errors are 0 for hours and hours.
 
+***The webpage is automatically refreshed every 2-3 seconds***
 
  ![image1](./image2.jpg?raw=true "3.6 Million external Interrupts per Second:")
 
