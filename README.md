@@ -110,6 +110,21 @@ You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 
 ### Where to use it?
 
+- Fast Handshake. Send an ACK to an external sender in less than 200 ns
+
+- Build a high speed protocol
+
+- Detect speed of motors (rpm) which are running very fast (turbo jet)
+
+- Measure speed of a gun bullet
+
+- Detect changes at multiple pins in 200 ns and react fast
+
+- Sending marks from RTOS tasks to analyze timings
+
+This method of polling in a very fast superloop is not only for pulses.
+
+
 
 # Installation
 
