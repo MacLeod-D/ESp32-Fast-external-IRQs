@@ -22,5 +22,8 @@ As allways  I want to see the timings on a scope, so I added pulses to show:
 1) When is the interrupt generated
 2) When does the interrupts service routine gets the interrupt
 3) When does the RTOS-task gets the signal.
+
+The pulses (high,low) are done at register level and need about 60 ns (nanosecends)
  
-T
+This is the result:
+ ![image1](./image1.jpg?raw=true "gpio example")
