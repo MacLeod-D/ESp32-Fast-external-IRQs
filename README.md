@@ -131,6 +131,9 @@ You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 
 7) Open a browser and look at     **http://192.168,xxx.yyy/info**
 
-You should see a Website like image2
+You should see a Website like image2 which is updated every 2-3 seconds.
+
+# Have fun ;)
+
 
    
