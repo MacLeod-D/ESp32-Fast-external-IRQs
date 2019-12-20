@@ -114,20 +114,20 @@ You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 3) Unzip the **fastIRQ2.zip** to **esp**
 4) Run **ifd.py menuconfig**
    
-   You should see:
-      Component_config/FreeRTOS (1000) Tick rate (Hz)
-      Component_config/Common_ESP_related:
-        Unmarked Interrupt watchdog
-        Unmarked Initialize Task Watchdog Timer
-      Component_config/ESP32_specific/CPU frequency 240 MHz
+   You should see:<br>
+      Component_config/FreeRTOS **(1000)** Tick rate (Hz)<br>
+      Component_config/Common_ESP_related:<br>
+        **Unmarked** Interrupt watchdog<br>
+        **Unmarked** Initialize Task Watchdog Timer<br>
+      Component_config/ESP32_specific/CPU frequency **240 MHz**<br>
       
-   Put your WiFi datat into
+   Put your **WiFi datat** into
       Example Connection Configuration
       
-5) Now connect your ESP32 an start ifd.py **flash** in terminal in **esp/irqFast2**   
-   The program should be compiled and uploaded.
+5) Now connect your ESP32 an start **ifd.py flash** in terminal in **esp/irqFast2**<br>
+   The program should be compiled and uploaded.<br>
    
-6) Look at the output to detect 192.168.xxx.yyy (or whatever your network-id is for this device)
+6) Look at the output to detect **192.168.xxx.yyy** (or whatever your network-id is for this device)
 
 7) Open a browser and look at     **http://192.168,xxx.yyy/info**
 
