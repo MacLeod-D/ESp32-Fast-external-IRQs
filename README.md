@@ -108,6 +108,8 @@ It is possible to count and react on more than ***3.600.000*** external pinchang
 120 ns HIGH-Length) at both edges! That is really ***Superfast***.<br>
 You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 
+### Where to use it?
+
 
 # Installation
 
