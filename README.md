@@ -15,5 +15,12 @@ we have a superfast Arduino - using all the libraries, which are not done for an
 Then the ESP32 came out - and well, you can use it in exactly this manner!<br>
 
 But lets start with the beginning:<br>
-In the examples you can find  the *** gpio_exmple ***<br>
+In the examples you can find  the ***gpio_exmple***<br>
+Here we have (selfmade) interrupts. The interrupt service routine then unblocks an RTOS task with ***xQueueSendFromISR***.<br>
+
+As allways  I want to see the timings on a scope, so I added pulses to show:
+1) When is the interrupt generated
+2) When does the interrupts service routine gets the interrupt
+3) When does the RTOS-task gets the signal.
  
+T
