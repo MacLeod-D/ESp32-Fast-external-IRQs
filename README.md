@@ -1,5 +1,5 @@
 # ESP32-Fast-external-IRQs
-## How to receive more than 3 Million Interrupts per Second
+## How to receive more than 3.000.000 Interrupts per Second
 
 I like the ESP8266. With 160 MHz it is fast! And you can do nearly all your Arduino stuff - but (at least) 10 times faster.
 
@@ -35,10 +35,34 @@ This is the result:
 ***That was disappointing***
 
 ----------------
+If you are poor and wants to buy a car maybe every €/$ counts.<br>
+If you are rich you maybe maybe spend a lot of money because you want a Countach - just for ***SPEED***<br>
+
+Yes, I am rich and have 2 cores - and I am willing to sacrify one of them - just for ***SPEED***
+
+The idea:
+
+On core 0 following tasks are running:
+
+1) A WebServer to show the results
+2) A task to send some data to the monitor
+3) A task, which produces a square wave to feed it to an interrupt pin:
+
+      while(1) {
+        portDISABLE_INTERRUPTS();
+        GPIO_Set(PinA);      // + 30 ns
+        Irqs2++;
+        delayClocks(40);                                                // 60 of 240 is  1/4 µs = 250 ns
+        GPIO_Clear(PinA);    // + 30 ns
+        Irqs2++;
+        delayClocks(40);
+        portENABLE_INTERRUPTS();
+      }
+      
+No vTaskDelay, no taskYIELD. But it is suspended after end of the timeslice (1 ms) is reached. 
 
 
-
-
+On core 1 there is only 1 task:
        while(1) {                                                       // the superloop
          level=GPIO_IN_Read(PinB);                                      
          
@@ -49,4 +73,13 @@ This is the result:
          }
          oldLevel=level;
        }
+
+This is an RTOS-task, but no taskswitches, even no interrupts are allowed. It is a brute force polling !<br>
+
+Advantages:
+1) Superfast
+2) I am not in an interrupt routine. Therefore I am able to use all functions an RTOS-task can use.
+
+###How fast is superfast###
+
 
