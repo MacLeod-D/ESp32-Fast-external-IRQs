@@ -12,18 +12,34 @@ Maybe the reasons behind the scene are different, but if I was the inventor of t
 In the second core we can do some high speed functions. If it is possible to stop taskswitching for the second core only<br>
 we have a superfast Arduino - using all the libraries, which are not done for an RTOS.<br>
 
-Then the ESP32 came out - and well, you can use it in exactly this manner!<br>
+***Then the ESP32 came out - and well, you can use it in exactly this manner!***<br>
 
 But lets start with the beginning:<br>
-In the examples you can find  the ***gpio_exmple***<br>
+In the espressif folder esp-id/fexamples you can find  the ***gpio_exmple***<br>
 Here we have (selfmade) interrupts. The interrupt service routine then unblocks an RTOS task with ***xQueueSendFromISR***.<br>
+( well, it could be done faster, but I don't want to change the example)
 
 As allways  I want to see the timings on a scope, so I added pulses to show:
 1) When is the interrupt generated
 2) When does the interrupts service routine gets the interrupt
 3) When does the RTOS-task gets the signal.
 
-The pulses (high,low) are done at register level and need about 60 ns (nanosecends)
+The pulses (high,low) are done at register level and need about 60 ns (nanoseconds)
  
 This is the result:
  ![image1](./image1.jpg?raw=true "gpio example")
+
+1.74 us from interrupt (source) to interrupt routine
+7.20 us from interrupt (source) to RTOS-tasks
+
+       while(1) {                                                       // the superloop
+         level=GPIO_IN_Read(PinB);                                      
+         
+         if (level != oldLevel) {
+            GPIO_Set(PinC);
+            GPIO_Clear(PinC);
+            Irqs++;
+         }
+         oldLevel=level;
+       }
+
