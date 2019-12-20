@@ -32,7 +32,7 @@ This is the result:
 1.74 us from interrupt (source) to interrupt routine
 7.20 us from interrupt (source) to RTOS-tasks
 
-***That was disappointing***
+***That was disappointing !***
 
 ----------------
 If you are poor and wants to buy a car maybe every €/$ counts.<br>
@@ -106,7 +106,31 @@ It is possible to count and react on more than ***3.600.000*** external pinchang
 You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 
 
+# Installation
 
+1) You should have managed to copy some examples into your **esp folder**. That is the folder where you can find **esp-idf**
+2) The esp/esp-idf/exmples folder should be intact, because **CMakeList.txt** needs
+   **set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/examples/common_components/protocol_examples_common)**
+3) Unzip the **fastIRQ2.zip** to **esp**
+4) Run **ifd.py menuconfig**
+   
+   You should see:
+      Component_config/FreeRTOS (1000) Tick rate (Hz)
+      Component_config/Common_ESP_related:
+        Unmarked Interrupt watchdog
+        Unmarked Initialize Task Watchdog Timer
+      Component_config/ESP32_specific/CPU frequency 240 MHz
+      
+   Put your WiFi datat into
+      Example Connection Configuration
+      
+5) Now connect your ESP32 an start ifd.py **flash** in terminal in **esp/irqFast2**   
+   The program should be compiled and uploaded.
+   
+6) Look at the output to detect 192.168.xxx.yyy (or whatever your network-id is for this device)
 
+7) Open a browser and look at     **http://192.168,xxx.yyy/info**
 
+You should see a Website like image2
 
+   
