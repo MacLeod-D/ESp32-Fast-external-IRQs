@@ -157,7 +157,7 @@ With this you just have to initiate the pulse in the RTOS-task<br>
 
 
 
-# Installation
+# Installation (for idf Version 4.1)
 
 1) You should have managed to copy some examples into your **esp folder**. That is the folder where you can find **esp-idf**
 2) The esp/esp-idf/exmples folder should be intact, because **CMakeList.txt** needs<br>
