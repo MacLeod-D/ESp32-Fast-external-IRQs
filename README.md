@@ -38,9 +38,9 @@ This is the result:
 
 ----------------
 If you are poor and wants to buy a car maybe every €/$ counts.<br>
-If you are rich you maybe maybe spend a lot of money because you want a Countach - just for ***SPEED***<br>
+If you are rich you maybe spend a lot of money because you want a Countach - just for ***SPEED***<br>
 
-Yes, I am rich and have 2 cores - and I am willing to sacrify one of them - just for ***SPEED***
+Yes, I am rich and have 2 cores ;)  - and I am willing to sacrify one of them - just for ***SPEED***
 
 The idea:
 
