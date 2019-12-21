@@ -60,7 +60,7 @@ On core 0 following tasks are running:
         portENABLE_INTERRUPTS();
       }
 ```      
-No vTaskDelay, no taskYIELD. But it is suspended after end of the timeslice (1 ms) is reached. 
+No vTaskDelay, no taskYIELD. But it is suspended when the end of the timeslice (1 ms) is reached. 
 
 
 On core 1 there is only 1 task:
@@ -149,9 +149,10 @@ and in the ***superloop***:
 ```       
 With this you just have to initiate the pulse in the RTOS-task<br>
 ***superloop*** will end the pulse with high precision !<br>
-### You will get a granularity of 50 ns !***<br>
 
+## You will get a granularity of 50 ns !<br>
 
+<br><br><br><br><br>
 
 
 
