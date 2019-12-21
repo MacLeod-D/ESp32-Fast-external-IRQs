@@ -148,7 +148,7 @@ and in the ***superloop***:
    }
 ```       
 With this you just have to initiate the pulse in the RTOS-task<br>
-***Superloop*** will end the pulse with high precision !
+***superloop*** will end the pulse with high precision !
 
 
 
