@@ -31,6 +31,7 @@ This is the result:
 
 1.74 us from interrupt (source) to interrupt routine
 7.20 us from interrupt (source) to RTOS-tasks
+(sorry for the bad quality of the pictures, I am using a very old HP1653B logic analyzer as scope)
 
 ***That was disappointing !***
 
