@@ -137,11 +137,11 @@ This method of polling in a very fast superloop is not only for pulses.
       You should see:<br>
              Component_config/FreeRTOS **(1000)** Tick rate (Hz)<br>
              Component_config/Common_ESP_related:<br>
-               **Unmarked** Interrupt watchdog<br>
-               **Unmarked** Initialize Task Watchdog Timer<br>
+             * **Unmarked** Interrupt watchdog<br>
+             * **Unmarked** Initialize Task Watchdog Timer<br>
              Component_config/ESP32_specific/CPU frequency **240 MHz**<br>
 
-      Put your **WiFi datat** into
+      Put your **WiFi data** into
              Example Connection Configuration
       
 5) Now connect your ESP32 an start **ifd.py flash** in terminal in **esp/irqFast2**<br>
