@@ -29,8 +29,8 @@ The pulses (high,low) are done at register level and need about 60 ns (nanosecon
 This is the result:
  ![image1](./image1.jpg?raw=true "gpio example")
 
-1.74 us from interrupt (source) to interrupt routine
-7.20 us from interrupt (source) to RTOS-tasks
+1.74 us from interrupt (source) to interrupt routine<br>
+7.20 us from interrupt (source) to RTOS-tasks<br>
 (sorry for the bad quality of the pictures, I am using a very old HP1653B logic analyzer as scope)
 
 ***That was disappointing !***
