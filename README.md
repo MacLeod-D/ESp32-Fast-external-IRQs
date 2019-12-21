@@ -21,7 +21,7 @@ Here we have (selfmade) interrupts. The interrupt service routine then unblocks 
 
 As allways  I want to see the timings on a scope, so I added pulses to show:
 1) When is the interrupt generated
-2) When does the interrupts service routine gets the interrupt
+2) When does the interrupt service routine gets the interrupt
 3) When does the RTOS-task gets the signal.
 
 The pulses (high,low) are done at register level and need about 60 ns (nanoseconds)
