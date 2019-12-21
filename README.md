@@ -65,6 +65,7 @@ No vTaskDelay, no taskYIELD. But it is suspended when the end of the timeslice (
 
 
 On core 1 there is only 1 task:
+```
        while(1) {                                                       // the superloop
          level=GPIO_IN_Read(PinB);                                      
          
@@ -75,6 +76,7 @@ On core 1 there is only 1 task:
          }
          oldLevel=level;
        }
+```
 
 This is an RTOS-task, but no taskswitches, even no interrupts are allowed. It is a brute force polling !<br>
 
