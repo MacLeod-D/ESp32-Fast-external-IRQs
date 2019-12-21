@@ -124,6 +124,33 @@ You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 - Sending marks from RTOS tasks to analyze timings
 
 This method of polling in a very fast superloop is not only for pulses.
+You may use it as:
+- A superfast Watchdog timer
+- A smart pule creator
+For instance an RTOS-task has to produce 22.5 us pulses very often, but you don't want to use a blocking delay.
+Now you can start a pulse like (RTOS-task):
+```
+        portDISABLE_INTERRUPTS();
+        GPIO_Set(PinA);      // + 30 ns
+        SetFlagForSuperLoop = 1;
+        portENABLE_INTERRUPTS();
+```
+and in the ***superloop***:
+
+```
+   while(1) {
+     if (SetFlagForSuperLoop) cnt++;
+     if (cnt==143) {          // try to find exactly 22.5 us
+       GPIO_Clear(PinA);      // + 30 ns
+       SetFlagForSuperLoop = 1;
+       cnt=0;
+     }
+   }
+```       
+With this you just have to initiate the pulse in the RTOS-task<br>
+***Superloop*** will end the pulse with high precision !
+
+
 
 
 
