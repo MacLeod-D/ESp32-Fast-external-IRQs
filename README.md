@@ -1,5 +1,6 @@
 # ESP32-Fast-external-IRQs
 ## How to receive more than 3.000.000 Interrupts per Second
+## How to shape Pulses with a Granularity of 50 ns
 
 I like the ESP8266. With 160 MHz it is fast! And you can do nearly all your Arduino stuff - but (at least) 10 times faster.
 
