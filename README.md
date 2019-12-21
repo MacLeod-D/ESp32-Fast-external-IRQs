@@ -130,7 +130,7 @@ This method of polling in a very fast superloop is not only for pulses.
 # Installation
 
 1) You should have managed to copy some examples into your **esp folder**. That is the folder where you can find **esp-idf**
-2) The esp/esp-idf/exmples folder should be intact, because **CMakeList.txt** needs
+2) The esp/esp-idf/exmples folder should be intact, because **CMakeList.txt** needs<br>
    **set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/examples/common_components/protocol_examples_common)**
 3) Unzip the **fastIRQ2.zip** to **esp**
 4) Run **ifd.py menuconfig**
