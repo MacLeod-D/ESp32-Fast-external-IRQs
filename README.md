@@ -149,7 +149,7 @@ This method of polling in a very fast superloop is not only for pulses.
    
 6) Look at the output to detect **192.168.xxx.yyy** (or whatever your network-id is for this device)
 
-7) Open a browser and look at     **http://192.168,xxx.yyy/info**   Do not forget the .../info !!!
+7) Open a browser and look at&nbsp;&nbsp; **http://192.168,xxx.yyy/info**   &nbsp;&nbsp;&nbsp;&nbsp;**Do not forget the .../info !!!**
 
 You should see a Website like image2 which is updated every 2-3 seconds.
 
