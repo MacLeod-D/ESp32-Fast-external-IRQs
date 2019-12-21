@@ -142,7 +142,7 @@ and in the ***superloop***:
      if (SetFlagForSuperLoop) cnt++;
      if (cnt==143) {          // try to find exactly 22.5 us
        GPIO_Clear(PinA);      // + 30 ns
-       SetFlagForSuperLoop = 1;
+       SetFlagForSuperLoop = 0;
        cnt=0;
      }
    }
