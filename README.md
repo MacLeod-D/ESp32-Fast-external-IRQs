@@ -89,11 +89,11 @@ This is repeated every 532 ns, giving a theoretical value of 3759398 interrupts 
  ![image3](./image3.jpg?raw=true "Detect an external interrupt in 176 ns")
  ***Detect an external interrupt in 176 ns***
 
-But since the interrupt source task (RTOS2) has to share its time with WiFi an d console output the measured value is<br>
+But since the interrupt source task (RTOS2) has to share its time with WiFi and console output the measured value is<br>
 a little bit lower. And it changes from second to second a little bit.
 
 But how can I be sure not missing interrupts?<br>
-It's easy: every time I generate an interrupt I count "Sended Interrupts".<br>
+It's easy: every time I generate an interrupt I incemented "Sended Interrupts".<br>
 The total independent ***superloop*** counts every detected pin change "interrupt".<br>
 They should have exactly the same value - and they do !<br>
 Errors are counted - and Errors are 0 for hours and hours.
