@@ -48,7 +48,7 @@ On core 0 following tasks are running:
 1) A WebServer to show the results
 2) A task to send some data to the monitor
 3) A task, which produces a square wave to feed it to an interrupt pin:
-
+```
       while(1) {
         portDISABLE_INTERRUPTS();
         GPIO_Set(PinA);      // + 30 ns
@@ -59,7 +59,7 @@ On core 0 following tasks are running:
         delayClocks(40);
         portENABLE_INTERRUPTS();
       }
-      
+```      
 No vTaskDelay, no taskYIELD. But it is suspended after end of the timeslice (1 ms) is reached. 
 
 
