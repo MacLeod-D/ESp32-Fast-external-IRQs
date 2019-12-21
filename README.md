@@ -148,7 +148,8 @@ and in the ***superloop***:
    }
 ```       
 With this you just have to initiate the pulse in the RTOS-task<br>
-***superloop*** will end the pulse with high precision !
+***superloop*** will end the pulse with high precision !<br>
+### You will get a granularity of 50 ns !***<br>
 
 
 
