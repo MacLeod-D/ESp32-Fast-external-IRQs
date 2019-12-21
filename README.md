@@ -140,7 +140,7 @@ and in the ***superloop***:
 ```
    while(1) {
      if (SetFlagForSuperLoop) cnt++;
-     if (cnt==143) {          // this is for 6.8 us
+     if (cnt==143) {          // this is for 6.8 us, 147 for 7.0 µs
        GPIO_Clear(PinA);      // + 30 ns
        SetFlagForSuperLoop = 0;
        cnt=0;
