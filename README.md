@@ -127,7 +127,7 @@ This method of polling in a very fast superloop is not only for pulses.
 You may use it as:
 - A superfast Watchdog timer
 - A smart pule creator
-For instance an RTOS-task has to produce 22.5 us pulses very often, but you don't want to use a blocking delay.
+For instance an RTOS-task has to produce 6.8 us pulses very often, but you don't want to use a blocking delay.
 Now you can start a pulse like (RTOS-task):
 ```
         portDISABLE_INTERRUPTS();
@@ -140,7 +140,7 @@ and in the ***superloop***:
 ```
    while(1) {
      if (SetFlagForSuperLoop) cnt++;
-     if (cnt==143) {          // try to find exactly 22.5 us
+     if (cnt==143) {          // this is for 6.8 us
        GPIO_Clear(PinA);      // + 30 ns
        SetFlagForSuperLoop = 0;
        cnt=0;
