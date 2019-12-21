@@ -129,8 +129,8 @@ You are even able to detect such pulses at different pins. (mask the REG_IN)<br>
 This method of polling in a very fast superloop is not only for pulses.
 You may use it as:
 - A superfast Watchdog timer
-- A smart pule creator
-For instance an RTOS-task has to produce 6.8 us pulses very often, but you don't want to use a blocking delay.
+- A smart pulse creator
+If for instance an RTOS-task has to produce 6.8 us pulses very often, but you don't want to use a blocking delay.
 Now you can start a pulse like (RTOS-task):
 ```
         portDISABLE_INTERRUPTS();
@@ -159,7 +159,7 @@ With this you just have to initiate the pulse in the RTOS-task<br>
 
 
 
-# Installation (for idf Version 4.1)
+# Installation (for esp-idf Version 4.1)
 
 1) You should have managed to copy some examples into your **esp folder**. That is the folder where you can find **esp-idf**
 2) The esp/esp-idf/exmples folder should be intact, because **CMakeList.txt** needs<br>
