@@ -82,7 +82,7 @@ This is an RTOS-task, but no taskswitches, even no interrupts are allowed. It is
 
 Advantages:
 1) Superfast
-2) I am not in an interrupt routine. Therefore I am able to use all functions an RTOS-task can use.
+2) I am ***not*** in an interrupt routine. Therefore I am able to use all functions an RTOS-task can do.
 
 ### How fast is superfast ?
 
