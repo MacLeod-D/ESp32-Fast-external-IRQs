@@ -184,7 +184,7 @@ With this you just have to initiate the pulse in the RTOS-task<br>
 
 7) Open a browser and look at&nbsp;&nbsp; **http://192.168.xxx.yyy/info**   &nbsp;&nbsp;&nbsp;&nbsp;**Do not forget the .../info !!!**
 
-You should see a Website like image2 which is updated every 2-3 seconds.
+You should see a Website like the last image which is updated every 2-3 seconds.
 
 # Have fun ;)
 
