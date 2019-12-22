@@ -187,9 +187,9 @@ and ***superloop***
 and you are able to change ClockTau and ClockLen on the fly !
 
 # CoopOS
-Use RTOS? or cooperative multitasking? ***CoopOS*** which I explained in other repositories.<br>
+Use RTOS? or cooperative multitasking ***CoopOS***? which I explained in other repositories.<br>
 Here you can have both!<br>
-RTOS on Core0, including Timer- an External interrupts.<br>
+RTOS on Core0, including Wifi, multiple RTOS tasks, Timer- an External interrupts.<br>
 And the fast ***CoopOS*** dealing with microsseconds on Core 1.<br>
 I will show it in another repository - stay tuned ;)<br>
 
