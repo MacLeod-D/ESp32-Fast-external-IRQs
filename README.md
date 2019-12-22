@@ -167,8 +167,7 @@ An RTOS task can test this flag (for instance 10 times a second) to do the outpu
 
 This is cool for jobs where you want to do high speed bit banging (WS2812 NeoPxeL).<br> 
 
-
-For instance: you want a ***pulse*** of ***100 ns***, repeated every ***500ns**
+For instance: you want a ***pulse*** of ***100 ns***, repeated every ***500ns***<br>
 Global:
 ```
     volatile uint32_t ClockTau = (120-9);                               // -9:: subtract GPIO
