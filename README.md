@@ -167,12 +167,26 @@ An RTOS task can test this flag (for instance 10 times a second) to do the outpu
 This is cool for jobs where you want to do high speed bit banging (WS2812 NeoPxeL).<br> 
 
 
-
+For instance: you want a pulse of 100 ns, repeated every 500ns
+Global:
+```
+    volatile uint32_t ClockTau = (120-9);                               // -9:: subtract GPIO
+    volatile uint32_t ClockLen = (24-9);
+```
+and ***superloop***
+```
+       uint32_t strt=clocks();
+       while(1) {                       
+          while ((clocks()-strt) < ClockTau);
+          strt=clocks();                                                // the superloop
+          GPIO_Set(PinC);
+          delayClocks(ClockLen);
+          GPIO_Clear(PinC);         
+       }
+```
+and you are able to change ClockTau and ClockLen on the fly !
 
 <br><br><br><br><br>
-
-
-
 
 # Installation (for esp-idf Version 4.1)
 
