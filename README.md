@@ -155,7 +155,22 @@ With this you just have to initiate the pulse in the RTOS-task<br>
 
 ## You will get a granularity of 50 ns !<br>
 
+<br> 
+With the methode shown you get an independent pocessor like a superfast Arduino in Core1.<br> 
+Exception: No Interrupts allowed.<br> 
+But you can communicate with Interrupts (Timer, External) which are installed at Core0!<br> 
+
+You should NOT use vTaskDelay or taskYIELD, but you may use delayMicroseconds ane even delayClocks.<br> 
+You should NOT use printf. Instead use sprintf into a buffer and the set a flag.<br> 
+An RTOS task can test this flag (for instance 10 times a second) to do the output of the buffer.<br> 
+
+This is cool for jobs where you want to do high speed bit banging (WS2812 NeoPxeL).<br> 
+
+
+
+
 <br><br><br><br><br>
+
 
 
 
