@@ -153,9 +153,10 @@ and in the ***superloop***:
 With this you just have to initiate the pulse in the RTOS-task<br>
 ***superloop*** will end the pulse with high precision !<br>
 
-## You will get a granularity of 50 ns !<br>
+# You will get a granularity of 50 ns !<br>
 
 <br> 
+# What else can we do ?
 With the methode shown you get an independent pocessor like a superfast Arduino in Core1.<br> 
 Exception: No Interrupts allowed.<br> 
 But you can communicate with Interrupts (Timer, External) which are installed at Core0!<br> 
@@ -167,7 +168,7 @@ An RTOS task can test this flag (for instance 10 times a second) to do the outpu
 This is cool for jobs where you want to do high speed bit banging (WS2812 NeoPxeL).<br> 
 
 
-For instance: you want a pulse of 100 ns, repeated every 500ns
+For instance: you want a ***pulse*** of ***100 ns***, repeated every ***500ns**
 Global:
 ```
     volatile uint32_t ClockTau = (120-9);                               // -9:: subtract GPIO
