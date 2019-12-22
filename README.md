@@ -153,7 +153,7 @@ and in the ***superloop***:
 With this you just have to initiate the pulse in the RTOS-task<br>
 ***superloop*** will end the pulse with high precision !<br>
 
-# You will get a granularity of 50 ns !<br>
+### You will get a granularity of 50 ns !<br>
 
 <br> 
 # What else can we do ?
@@ -186,6 +186,13 @@ and ***superloop***
        }
 ```
 and you are able to change ClockTau and ClockLen on the fly !
+
+# CoopOS
+Use RTOS? or cooperative multitasking? ***CoopOS*** which I explained in other repositories.
+Here you can have both!-
+RTOS on Core0, including Timer- an External interrupts.
+And the fast ***CoopOS*** dealing with microsseconds on Core 1.
+I will show it in another repository - stay tuned ;)
 
 <br><br><br><br><br>
 
