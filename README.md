@@ -16,7 +16,7 @@ we have a superfast Arduino - using all the libraries, which are not done for an
 ***Then the ESP32 came out - and well, you can use it in exactly this manner!***<br>
 
 But lets start with the beginning:<br>
-In the espressif folder esp-id/fexamples you can find  the ***gpio_exmple***<br>
+In the espressif folder esp-id/fexamples you can find  the ***gpio_example***<br>
 Here we have (selfmade) interrupts. The interrupt service routine then unblocks an RTOS task with ***xQueueSendFromISR***.<br>
 ( well, it could be done faster, but I don't want to change the example)
 
